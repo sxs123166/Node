@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // path路径模块是Node.js官方提供的、用来处理路径的模块。它提供了一系列的方法和属性。
+        // 用来满足处理路径的需求
+        // 例如：
+        // path.join方法(),用来将多个路径片段拼接成一个完整字符串路径
+        // path.basename()方法，用来从字符串路径中，将文件名解析出来
+
+        // 如果要在JavaScript代码中，使用path模块来处理路径，需要用以下的方式先倒入
+        // const path = require('path')
+
+        // 1.path.join()方式
+        // 使用path.join方法，可以把多个路径片段拼接为完整的路径字符串
+        // const pathStr = path.join('/a','/b/c','../','./d','e')
+        // console.log(pathStr); //输出\a\b\d\e
+
+        // const pathStr2 = path.join(__dirname, './files/1.txt')
+        // console.log(pathStr2); //输出 当前文件所处目录\files\1.txt
+
+        // 注意：以后涉及到路径拼接的操作，都要使用path.join()方法进行处理。不要使用+来进行拼接
+
+        // 2.path.basename()代码示例
+        // 使用path.basename()方法，可以从一个文件路径中，获取到文件的名称部分
+        // const fpath = '/a/b/c/index.html'
+
+        // var fullName = path.basename(fpath)
+        // console.log(fullname); //输出index.html
+
+        // var namWithoutExt = path.basename(fpath, '.html')
+        // console.log(namWithoutExt); //输出index
+
+        // 3.获取文件的扩展名
+        // const fpath = 'a/b/c/index.html' //路径字符串
+
+        // const fext = path.extname(fpath)
+        // console.log(fext);
+
+    </script>
+</body>
+</html>

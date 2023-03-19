@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 什么是fs文件系统模块？
+
+        // fs模块是Node.js官网提供的，用来操作文件的模块。它提供了一系列的方法和属性，用来满足用户对文件的操作需求
+        // 例如：
+        // fs.readFile()方法，用来读取指定文件中的内容
+        // fs.writeFile()方法，用来向指定的文件中写入内容
+
+        // 如果要在JavaScript代码中， 使用fs模块来操作文件，则使用如下的方式先倒入它：
+        // const fs = require('fs')
+
+        // 1.fs.readFile()的语法格式
+        // 使用fs.readFile()方法，可以读取指定文件中的内容，语法格式如下：
+        // fs.readFile(path[, options],callback)
+        // 参数解读：
+        // 参数1: 必选参数，字符串，表示文件的路径
+        // 参数2：可选参数，表示以什么编码格式来读取文件
+        // 参数3: 必选参数，文件读取完成以后，通过回调函数拿到读取的结果
+
+        // 2.fs.readFile()的示例代码
+        // 以utf8的编码格式， 读取指定文件的内容，并打印err和dataStr的值
+        
+        // 1）导入fs模块，来操作文件
+        // const fs = require('fs')
+        // 2） 调用fs.readFile()方法读取文件
+            //    参数1： 读取文件的存放路径
+            //    参数2: 读取文件时候采用的编码格式， 一般默认指定utf8
+            //    参数3: 回调函数， 拿到读取失败和成功的结果 err dataStr
+        // fs.readFile('./files/11.txt', 'utf8', function(err, dataStr)) {
+            // 打印失败的结果
+            // 如果读取成功，则err的值为null
+            // 如果读取失败， 则err的值为 错误对象，dataStr的值为undefined
+        //     console.log(err);
+        //     console.log('-------');
+        // 打印成功的结果
+        //     console.log(dataStr);
+        // }
+
+
+        // 3.判断文件是否读取成功
+        // 可以判断err对象是否为null, 从而知晓文件的读取结果
+        // const fs = require('fs');
+        // fs.readFile('./files/1.txt', 'utf8', function(err, result) {
+        //     if(err) {
+        //         return console.log('文件读取失败' + err.message);
+        //     }
+        //     console.log('文件读取成功， 内容是：' + result);
+        // })
+
+
+
+
+    </script>
+</body>
+</html>
